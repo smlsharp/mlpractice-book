@@ -1,0 +1,14 @@
+_require "basis.smi"
+structure Game =
+struct
+  datatype color = BLACK | WHITE
+  type pos = int * int
+  type board (= list)
+  type game = {board : board, next : color option}
+  val init : game
+  val boardSize : int
+  val get : board -> pos -> color option
+  val possible : board -> color -> pos list
+  val step : game -> pos -> game option
+  val play : pos list -> game option
+end

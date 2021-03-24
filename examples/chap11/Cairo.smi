@@ -1,0 +1,35 @@
+_require "basis.smi"
+_require "ffi.smi"
+structure Cairo =
+struct
+  exception Error of string
+  type cairo_surface_t (= ptr)
+  val cairo_pdf_surface_create
+      : string * real * real -> cairo_surface_t
+  val cairo_surface_destroy : cairo_surface_t -> unit
+  type cairo_t (= ptr)
+  val cairo_create : cairo_surface_t -> cairo_t
+  val cairo_destroy : cairo_t -> unit
+  val cairo_save : cairo_t -> unit
+  val cairo_restore : cairo_t -> unit
+  val cairo_fill : cairo_t -> unit
+  val cairo_stroke : cairo_t -> unit
+  val cairo_paint : cairo_t -> unit
+  val cairo_set_source_rgb
+      : cairo_t * real * real * real -> unit
+  val cairo_set_line_width : cairo_t * real -> unit
+  val cairo_new_sub_path : cairo_t -> unit
+  val cairo_move_to : cairo_t * real * real -> unit
+  val cairo_line_to : cairo_t * real * real -> unit
+  val cairo_rectangle
+      : cairo_t * real * real * real * real -> unit
+  val cairo_arc
+      : cairo_t * real * real * real * real * real -> unit
+  val cairo_set_font_size : cairo_t * real -> unit
+  val cairo_text_extents
+      : cairo_t * string * real array -> unit
+  val cairo_text_path : cairo_t * string -> unit
+  val cairo_translate : cairo_t * real * real -> unit
+  val cairo_scale : cairo_t * real * real -> unit
+  val cairo_rotate : cairo_t * real -> unit
+end

@@ -1,0 +1,10 @@
+_require "basis.smi"
+structure FileIO =
+struct
+  type FILE (= ptr)
+  val EOF : int
+  val fopen : string * string -> FILE
+  val fclose : FILE -> int
+  val fgetc : FILE -> int
+  val fputc : int * FILE -> int
+end

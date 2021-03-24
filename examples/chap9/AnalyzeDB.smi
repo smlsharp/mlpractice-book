@@ -1,0 +1,12 @@
+_require "basis.smi"
+_require "sql.smi"
+_require "./DBSchema.smi"
+
+structure AnalyzeDB = 
+struct
+  type resultTy = {累積陽性者:real, 
+                   都道府県名:string, 
+                   人口（万人）:real, 
+                   累積陽性者割合（／万人）:real}
+  val Q : DBSchema.covidDB SQL.conn -> resultTy SQL.cursor
+end

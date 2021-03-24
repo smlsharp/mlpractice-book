@@ -1,0 +1,10 @@
+SMLSHARP = smlsharp
+SMLFLAGS = -O2
+LIBS = mt19937-64.o
+all: MTTest
+MTTest: MT.smi MTTest.smi MT.o MTTest.o
+	$(SMLSHARP) $(LDFLAGS) -o MTTest MTTest.smi $(LIBS)
+MT.o: MT.sml MT.smi
+	$(SMLSHARP) $(SMLFLAGS) -o MT.o -c MT.sml
+MTTest.o: MTTest.sml MT.smi MTTest.smi
+	$(SMLSHARP) $(SMLFLAGS) -o MTTest.o -c MTTest.sml

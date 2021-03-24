@@ -1,0 +1,12 @@
+_require "basis.smi"
+structure MakeDict =
+struct
+  exception Empty
+  type ('key, 'value) dict (= boxed)
+  val makeDict
+    : ('key * 'key -> order) ->
+      {empty : ['value. ('key, 'value) dict],
+       find : ['value. ('key, 'value) dict * 'key -> 'value],
+       enter : ['value. ('key * 'value) * ('key, 'value) dict
+                         -> ('key, 'value) dict]}
+end

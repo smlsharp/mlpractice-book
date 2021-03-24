@@ -1,0 +1,3 @@
+_require "basis.smi"
+_require "./FileIO.smi"
+val copyFile : string -> string -> unit

@@ -1,0 +1,12 @@
+_require "basis.smi"
+_require "./MakeDict.smi"
+structure StringDict =
+struct
+  exception Empty
+  type 'a dict (= MakeDict.dict)
+  val empty : 'a dict
+  val find : 'a dict * string -> 'a
+  val enter : (string * 'a) * 'a dict -> 'a dict
+end
+
+

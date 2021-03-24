@@ -1,0 +1,8 @@
+_require "basis.smi"
+_require "sql.smi"
+_require local "./Draw.smi"
+_require local "./Graph.smi"
+structure Main =
+struct
+  val main : string * string list -> OS.Process.status
+end

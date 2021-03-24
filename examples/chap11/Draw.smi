@@ -1,0 +1,18 @@
+_require "basis.smi"
+_require local "./Cairo.smi"
+structure Draw =
+struct
+  datatype path =
+      LINES of (real * real) list
+    | RECT of real * real * real * real
+    | CIRCLE of real * real * real
+    | TEXT of real * real * string
+    | MOVE of real * real * path
+    | SCALE of real * real * path
+    | ROTATE of real * path
+    | COMBINE of path list
+  datatype obj =
+      STROKE of path
+    | FILL of path
+  val toPDF : string -> obj list -> unit
+end

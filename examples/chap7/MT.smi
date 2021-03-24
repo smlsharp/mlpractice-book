@@ -1,0 +1,9 @@
+structure MT =
+struct
+  val init_genrand64 : word64 -> unit
+  val genrand64_int64 : unit -> word64
+  val genrand64_int63 : unit -> int64
+  val genrand64_real1 : unit -> real
+  val genrand64_real2 : unit -> real
+  val genrand64_real3 : unit -> real
+end

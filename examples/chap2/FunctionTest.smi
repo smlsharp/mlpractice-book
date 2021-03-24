@@ -1,0 +1,9 @@
+_require "basis.smi"
+structure FunctionTest =
+struct
+  val sum : int64 -> int64
+  val power : int -> int -> int
+  val cube : int -> int
+  val Sigma : (int -> int) -> int ->int
+  val sumCubeSigma : int -> int
+end

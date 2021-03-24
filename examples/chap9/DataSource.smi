@@ -1,0 +1,31 @@
+_require "basis.smi"
+_require "reify.smi"
+_require "./DBSchema.smi"
+_require "../../chap8/JSONImport.smi"
+structure DataSource =
+struct
+ val 都道府県コードUrl : string
+ val 都道府県人口Url : string
+ val 累積陽性者Url : string
+ type 都道府県コードty =
+  {GET_META_REGION_INF:
+   {METADATA_INF:
+    {CLASS_INF:
+     {CLASS_OBJ:
+       {"@name":string, 
+        CLASS:{"@regionCode":string,"@name":string}list}list}}}}
+ type 都道府県人口ty =
+  {GET_STATS:
+   {RESULT:{status:string, errorMsg:string, date:string},
+     STATISTICAL_DATA: 
+      {RESULT_INF:{TOTAL_NUMBER:string},
+       DATA_INF:
+        {DATA_OBJ:
+          {VALUE:{"@regionCode":string,"$":string}}list}}}}
+ type 累積陽性者ty =
+  {lastUpdate:string,
+   area:{name_jp:string, npatients:int} list} list
+ val import : unit -> {都道府県コード : 都道府県コードty,
+                       都道府県人口 : 都道府県人口ty,
+                       累積陽性者 : 累積陽性者ty}
+end

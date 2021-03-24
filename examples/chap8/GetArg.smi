@@ -1,0 +1,8 @@
+_require "basis.smi"
+_require "reify.smi"
+_require "./castLike.smi"
+structure GetArg =
+struct
+  exception Format
+  val getArg : ['a#reify. 'a -> 'a]
+end
