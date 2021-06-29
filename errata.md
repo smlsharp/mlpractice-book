@@ -23,7 +23,7 @@ val name = fn : ['a#{name: 'b}. 'b, 'a -> 'b]
 </td>
 <td>
 <pre>
-val name = fn : ['a#{name: 'b}, 'b. 'a -> 'b]
+val name = fn : ['a#{name: 'b}<strong>,</strong> 'b<strong>.</strong> 'a -> 'b]
 </pre>
 </td>
 </tr>
@@ -51,6 +51,16 @@ smlsharp  -o <strong>Main</strong> <strong>Main.smi</strong>
 $ time <strong>./Main</strong>
 500000000500000000
 </pre>
+</td>
+</tr>
+
+<tr>
+<td>3章 p.51 図3.1 下から1行目</td>
+<td>
+<img src="https://render.githubusercontent.com/render/math?math=unzip(l)=L_{zip}(l,nil,nil)" alt="$unzip(l) = L_{zip}(l, nil, nil)$">
+</td>
+<td>
+<img src="https://render.githubusercontent.com/render/math?math=unzip(l)=L_{unzip}(l,\mathrm{nil},\mathrm{nil})" alt="$unzip(l) = L_{unzip}(l, \mathtt{nil}, \mathtt{nil})$">
 </td>
 </tr>
 
