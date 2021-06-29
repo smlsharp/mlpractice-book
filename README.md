@@ -8,6 +8,7 @@
 
 ## ファイルの説明
 * [`README.md`] 本ファイル。
+* [`errata.md`] 正誤表。
 * [`examples/chap1/`] 〜 [`examples/chap11/`]
    第1章から第11章のコード例を含むフォルダ。簡単な式の評価例等は省略。
 * [`covid19japan.json`]
@@ -21,6 +22,7 @@
 [教科書ページ]: https://smlsharp.github.io/ja/textbooks/
 [教科書の補足説明ページ]: https://smlsharp.github.io/ja/textbooks/supplement/
 [`README.md`]: README.md
+[`errata.md`]: errata.md
 [`examples/chap1/`]: examples/chap1/
 [`examples/chap11/`]: examples/chap11/
 [`covid19japan.json`]: covid19japan.json
