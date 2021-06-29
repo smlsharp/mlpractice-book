@@ -15,6 +15,20 @@
 <tbody>
 
 <tr>
+<td>2章 p.35 下から4行目</td>
+<td>
+<pre>
+val name = fn : ['a#{name: 'b}. 'b, 'a -> 'b]
+</pre>
+</td>
+<td>
+<pre>
+val name = fn : ['a#{name: 'b}, 'b. 'a -> 'b]
+</pre>
+</td>
+</tr>
+
+<tr>
 <td>2章 p.38 21行目</td>
 <td>
 <pre>
