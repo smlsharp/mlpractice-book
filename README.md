@@ -28,4 +28,5 @@
 [`examples/chap1/`]: examples/chap1/
 [`examples/chap11/`]: examples/chap11/
 [`covid19japan.json`]: covid19japan.json
+[`covid19japan-all.json`]: covid19japan-all.json
 [`covid19japanjsonNotice.txt`]: covid19japanjsonNotice.txt
