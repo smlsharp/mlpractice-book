@@ -11,10 +11,12 @@
 * [`errata.md`] 正誤表。
 * [`examples/chap1/`] 〜 [`examples/chap11/`]
    第1章から第11章のコード例を含むフォルダ。簡単な式の評価例等は省略。
-* [`covid19japan.json`]
+* [`covid19japan-all.json`]
    9.10.1項でアクセスするファイルのバックアップファイル。
    [教科書の補足説明ページ]参照。
 * [`covid19japanjsonNotice.txt`] 上記ファイルのライセンス情報。
+* [`covid19japan.json`]
+  `covid19japan-all.json`の代替ファイル。`covid19japan-all.json`と同一のライセンスに従う。
 
 [SML#で始める実践MLプログラミング]: https://www.kyoritsu-pub.co.jp/bookdetail/9784320124714
 [共立出版]: https://www.kyoritsu-pub.co.jp/

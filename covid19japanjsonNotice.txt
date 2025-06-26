@@ -1,12 +1,7 @@
 ファイル 
-  "covid19japan.json" 
+  "covid19japan-all.json" 
 は、
 CC BY 4.0ライセンス(https://creativecommons.org/licenses/by/4.0/deed.ja) に従い、
-  "https://www.stopcovid19.jp/data/covid19japan.json"
+  "https://www.stopcovid19.jp/data/covid19japan-all.json"
 からダウンロードし、教科書「SML#で始める実践MLプログラミング」のサポー
 トデータとして公開するものです。
-
-データを新型コロナウイルス感染症対策推進室（内閣官房）が
- "https://data.corona.go.jp/converted-json/covid19japan-all.json"
-から配布の形式を揃えるため、全体を"["と"]"で囲み、JSONの配列
-とする変更を加えています。
